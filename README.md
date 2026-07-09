@@ -48,7 +48,11 @@ Ferramentas nativas para garantir que a comunicação da sua party seja impecáv
 
 ## 💻 Tecnologias Utilizadas
 
-*em processo...*
+- HTML
+- CSS
+- JavaScript
+- TypeScript
+- Docker
 
 ---
 
