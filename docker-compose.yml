@@ -1,68 +1,55 @@
 version: '3.8'
 
 services:
-  # Database Service (Assuming PostgreSQL as a common relational DB)
-  db:
-    image: postgres:15-alpine
-    container_name: rpgflix_db
-    environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: adminpassword
-      POSTGRES_DB: rpgflix
-    ports:
-      - "5432:5432"
-    volumes:
-      - db_data:/var/lib/postgresql/data
-    networks:
-      - rpgflix_network
-    restart: unless-stopped
-
-  # Backend Service
-  backend:
+  # Frontend (Vite) - é o que o projeto tem de fato hoje
+  frontend:
     build:
       context: .
-      # If your backend is in a subfolder (e.g., ./api or ./backend), update the context:
-      # context: ./backend 
-    container_name: rpgflix_backend
-    environment:
-      - DATABASE_URL=postgres://admin:adminpassword@db:5432/rpgflix
-      - PORT=8080
-      - NODE_ENV=development # Update to 'production' as needed
+      dockerfile: dockerfile
+    container_name: rpgflix_frontend
     ports:
-      - "8080:8080"
-    depends_on:
-      - db
+      - "5173:5173"
+    volumes:
+      - ./project-rpgflix:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true   # hot-reload confiável em alguns hosts (Windows/WSL)
     networks:
       - rpgflix_network
     restart: unless-stopped
 
-  # Frontend Service (Optional: if the project has a separated frontend build like React/Vue)
-  # frontend:
-  #   build:
-  #     context: ./frontend
-  #   container_name: rpgflix_frontend
+  # --- Abaixo: serviços para quando o backend existir de fato ---
+  # Descomente e ajuste quando houver uma pasta backend/ com Dockerfile próprio
+
+  # db:
+  #   image: postgres:15-alpine
+  #   container_name: rpgflix_db
+  #   environment:
+  #     POSTGRES_USER: ${DB_USER:-admin}
+  #     POSTGRES_PASSWORD: ${DB_PASSWORD:-adminpassword}
+  #     POSTGRES_DB: rpgflix
   #   ports:
-  #     - "3000:3000"
-  #   depends_on:
-  #     - backend
+  #     - "5432:5432"
+  #   volumes:
+  #     - db_data:/var/lib/postgresql/data
   #   networks:
   #     - rpgflix_network
   #   restart: unless-stopped
 
-  # Optional: pgAdmin for Database Management
-  pgadmin:
-    image: dpage/pgadmin4
-    container_name: rpgflix_pgadmin
-    environment:
-      PGADMIN_DEFAULT_EMAIL: admin@rpgflix.local
-      PGADMIN_DEFAULT_PASSWORD: adminpassword
-    ports:
-      - "5050:80"
-    depends_on:
-      - db
-    networks:
-      - rpgflix_network
-    restart: unless-stopped
+  # backend:
+  #   build:
+  #     context: ./backend
+  #   container_name: rpgflix_backend
+  #   environment:
+  #     - DATABASE_URL=postgres://${DB_USER:-admin}:${DB_PASSWORD:-adminpassword}@db:5432/rpgflix
+  #     - PORT=8080
+  #   ports:
+  #     - "8080:8080"
+  #   depends_on:
+  #     - db
+  #   networks:
+  #     - rpgflix_network
+  #   restart: unless-stopped
 
 volumes:
   db_data:
@@ -72,4 +59,3 @@ networks:
   rpgflix_network:
     name: rpgflix_network
     driver: bridge
-  
