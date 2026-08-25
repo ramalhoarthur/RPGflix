@@ -1,8 +1,6 @@
 FROM node:24-alpine
 
-<<<<<<< Updated upstream
 RUN apk add git bash --no-cache
-=======
 RUN apk add git bash --no-cache
 
 WORKDIR /app
@@ -20,4 +18,4 @@ EXPOSE 5173
 
 # Executa o servidor de desenvolvimento expondo a porta para a rede do Docker
 CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
->>>>>>> Stashed changes
+
