@@ -3,7 +3,7 @@ import { RPGS, CATEGORIAS, HERO } from "./data/rpgsData";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { Row } from "./components/Row";
-import { RPGCard } from "./components/RPGCard";
+import { RPGCard } from "./components/RPGcard";
 import { Modal } from "./components/Modal";
 import "./App.css";
 
@@ -80,7 +80,13 @@ export default function App() {
         </>
       )}
 
-      {selected && <Modal rpg={selected} onClose={() => setSelected(null)} />}
+      {selected && (
+  <Modal 
+    rpg={selected} 
+    onClose={() => setSelected(null)} 
+    onSelectRpg={setSelected} 
+  />
+)}
     </div>
   );
 }

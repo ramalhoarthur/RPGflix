@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { X, Sparkles, Users, FileText } from "lucide-react";
 import { FileRow } from "./FileRow";
+import { Recommendations } from "./Recommendations"; // Importe aqui
 
 interface ModalProps {
   rpg: any;
   onClose: () => void;
+  onSelectRpg?: (rpg: any) => void; // Adicione esta linha
 }
 
-export function Modal({ rpg, onClose }: ModalProps) {
+export function Modal({ rpg, onClose, onSelectRpg }: ModalProps) {
   const [openFile, setOpenFile] = useState<number | null>(null);
   const Icon = rpg.icon;
 
@@ -16,6 +18,11 @@ export function Modal({ rpg, onClose }: ModalProps) {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [onClose]);
+
+  // Limpa os arquivos abertos caso mude de RPG com o modal aberto
+  useEffect(() => {
+    setOpenFile(null);
+  }, [rpg.id]);
 
   return (
     <div className="gr-overlay" onClick={onClose}>
@@ -57,6 +64,9 @@ export function Modal({ rpg, onClose }: ModalProps) {
               onToggle={() => setOpenFile(openFile === i ? null : i)}
             />
           ))}
+
+          {/* Adicione o componente de recomendações no final do modal */}
+          <Recommendations currentRpgId={rpg.id} onSelectRpg={onSelectRpg} />
         </div>
       </div>
     </div>

@@ -16,10 +16,10 @@ export const RPGS = {
     description:
       "Em Arton, deuses caminharam entre mortais e deixaram um mundo repleto de magia, ruínas e monstros. Tormenta20 traz um sistema ágil de d20 para heróis que vão da taverna à lenda.",
     files: [
-      { name: "Livro Básico", icon: BookOpen, pages: 428, summary: "Regras completas de criação de personagem, magia e combate." },
-      { name: "Ameaças de Arton", icon: Skull, pages: 256, summary: "Bestiário oficial com criaturas e NPCs para todos os níveis." },
-      { name: "Guia do Mestre", icon: Shield, pages: 180, summary: "Ferramentas, tabelas e conselhos para conduzir campanhas." },
-      { name: "Mapa de Arton", icon: MapIcon, pages: 2, summary: "Cartografia completa do continente e suas nações." },
+      { name: "Livro Básico", icon: BookOpen, pages: 428, summary: "Regras completas de criação de personagem, magia e combate.", url: "/files/tormenta20/livro-basico.pdf" },
+      { name: "Ameaças de Arton", icon: Skull, pages: 256, summary: "Bestiário oficial com criaturas e NPCs para todos os níveis.", url: "/files/tormenta20/ameacas-de-arton.pdf" },
+      { name: "Guia do Mestre", icon: Shield, pages: 180, summary: "Ferramentas, tabelas e conselhos para conduzir campanhas.", url: "/files/tormenta20/guia-do-mestre.pdf" },
+      { name: "Mapa de Arton", icon: MapIcon, pages: 2, summary: "Cartografia completa do continente e suas nações.", url: "/files/tormenta20/mapa-de-arton.pdf" },
     ],
   },
   dnd5e: {
@@ -34,11 +34,11 @@ export const RPGS = {
     description:
       "O sistema mais jogado do mundo. Monte um grupo, explore masmorras e enfrente dragões em campanhas que vão da vila pacata a impérios em ruínas.",
     files: [
-      { name: "Manual do Jogador", icon: BookOpen, pages: 320, summary: "Raças, classes, perícias e magias para criar seu herói." },
-      { name: "Guia do Mestre", icon: Shield, pages: 288, summary: "Regras de campanha, tesouros e construção de mundos." },
-      { name: "Manual dos Monstros", icon: Skull, pages: 352, summary: "Centenas de criaturas prontas para o combate." },
-      { name: "Tela do Mestre", icon: FileText, pages: 4, summary: "Tabelas essenciais à mão durante a sessão." },
-      { name: "A Mina Perdida de Phandelver", icon: Scroll, pages: 96, summary: "Aventura introdutória para grupos iniciantes." },
+      { name: "Manual do Jogador", icon: BookOpen, pages: 320, summary: "Raças, classes, perícias e magias para criar seu herói.", url: "/files/dnd5e/manual-do-jogador.pdf" },
+      { name: "Guia do Mestre", icon: Shield, pages: 288, summary: "Regras de campanha, tesouros e construção de mundos.", url: "/files/dnd5e/guia-do-mestre.pdf" },
+      { name: "Manual dos Monstros", icon: Skull, pages: 352, summary: "Centenas de criaturas prontas para o combate.", url: "/files/dnd5e/manual-dos-monstros.pdf" },
+      { name: "Tela do Mestre", icon: FileText, pages: 4, summary: "Tabelas essenciais à mão durante a sessão.", url: "/files/dnd5e/tela-do-mestre.pdf" },
+      { name: "A Mina Perdida de Phandelver", icon: Scroll, pages: 96, summary: "Aventura introdutória para grupos iniciantes.", url: "/files/dnd5e/phandelver.pdf" },
     ],
   },
   pathfinder2e: {
@@ -53,10 +53,10 @@ export const RPGS = {
     description:
       "Um sistema de três ações por turno que recompensa planejamento e customização profunda de personagens, em um mundo vasto chamado Golarion.",
     files: [
-      { name: "Manual Básico", icon: BookOpen, pages: 638, summary: "Núcleo completo de regras, ancestralidades e classes." },
-      { name: "Guia do Mestre de Jogo", icon: Shield, pages: 384, summary: "Criação de aventuras e recompensas equilibradas." },
-      { name: "Bestiário", icon: Skull, pages: 360, summary: "Monstros catalogados por nível de desafio." },
-      { name: "Tela do Mestre", icon: FileText, pages: 4, summary: "Resumo de regras de ação e condições." },
+      { name: "Manual Básico", icon: BookOpen, pages: 638, summary: "Núcleo completo de regras, ancestralidades e classes.", url: "/files/pathfinder2e/manual-basico.pdf" },
+      { name: "Guia do Mestre de Jogo", icon: Shield, pages: 384, summary: "Criação de aventuras e recompensas equilibradas.", url: "/files/pathfinder2e/guia-do-mestre.pdf" },
+      { name: "Bestiário", icon: Skull, pages: 360, summary: "Monstros catalogados por nível de desafio.", url: "/files/pathfinder2e/bestiario.pdf" },
+      { name: "Tela do Mestre", icon: FileText, pages: 4, summary: "Resumo de regras de ação e condições.", url: "/files/pathfinder2e/tela-do-mestre.pdf" },
     ],
   },
   olddragon2: {
@@ -71,9 +71,9 @@ export const RPGS = {
     description:
       "Regras simples e diretas inspiradas na era dourada do RPG de mesa, com masmorras letais e heróis que crescem na base da experiência.",
     files: [
-      { name: "Livro do Jogador", icon: BookOpen, pages: 210, summary: "Classes clássicas e regras enxutas de jogo." },
-      { name: "Livro dos Monstros", icon: Skull, pages: 190, summary: "Ameaças old school para toda faixa de nível." },
-      { name: "Livro do Mestre", icon: Shield, pages: 160, summary: "Criação de masmorras e recompensas justas." },
+      { name: "Livro do Jogador", icon: BookOpen, pages: 210, summary: "Classes clássicas e regras enxutas de jogo.", url: "/files/olddragon2/livro-do-jogador.pdf" },
+      { name: "Livro dos Monstros", icon: Skull, pages: 190, summary: "Ameaças old school para toda faixa de nível.", url: "/files/olddragon2/livro-dos-monstros.pdf" },
+      { name: "Livro do Mestre", icon: Shield, pages: 160, summary: "Criação de masmorras e recompensas justas.", url: "/files/olddragon2/livro-do-mestre.pdf" },
     ],
   },
   cthulhu: {
@@ -88,10 +88,10 @@ export const RPGS = {
     description:
       "Investigadores comuns encaram horrores cósmicos além da compreensão humana. Cada pista descoberta tem um preço — e nem sempre é possível pagá-lo.",
     files: [
-      { name: "Livro de Regras", icon: BookOpen, pages: 448, summary: "Sistema de percentual, sanidade e investigação." },
-      { name: "Guia do Guardião", icon: Shield, pages: 120, summary: "Conselhos para conduzir horror e mistério." },
-      { name: "Companhia de Investigadores", icon: Users, pages: 32, summary: "Fichas e arquétipos prontos para jogar." },
-      { name: "A Cidade Sem Nome", icon: Scroll, pages: 64, summary: "Cenário de investigação autocontido." },
+      { name: "Livro de Regras", icon: BookOpen, pages: 448, summary: "Sistema de percentual, sanidade e investigação.", url: "/files/cthulhu/livro-de-regras.pdf" },
+      { name: "Guia do Guardião", icon: Shield, pages: 120, summary: "Conselhos para conduzir horror e mistério.", url: "/files/cthulhu/guia-do-guardiao.pdf" },
+      { name: "Companhia de Investigadores", icon: Users, pages: 32, summary: "Fichas e arquétipos prontos para jogar.", url: "/files/cthulhu/investigadores.pdf" },
+      { name: "A Cidade Sem Nome", icon: Scroll, pages: 64, summary: "Cenário de investigação autocontido.", url: "/files/cthulhu/cidade-sem-nome.pdf" },
     ],
   },
   vampiro: {
@@ -106,10 +106,10 @@ export const RPGS = {
     description:
       "Vampiros modernos disputam poder nas sombras das cidades, equilibrando humanidade e instinto em uma teia política sem fim.",
     files: [
-      { name: "Livro de Regras", icon: BookOpen, pages: 400, summary: "Clãs, disciplinas e a trilha da humanidade." },
-      { name: "Guia do Narrador", icon: Shield, pages: 150, summary: "Como conduzir crônicas de política e horror pessoal." },
-      { name: "Bestiário de Kindred", icon: Skull, pages: 130, summary: "Antagonistas sobrenaturais para a crônica." },
-      { name: "Chicago por Noite", icon: MapIcon, pages: 180, summary: "Cenário de campanha urbano completo." },
+      { name: "Livro de Regras", icon: BookOpen, pages: 400, summary: "Clãs, disciplinas e a trilha da humanidade.", url: "/files/vampiro/livro-de-regras.pdf" },
+      { name: "Guia do Narrador", icon: Shield, pages: 150, summary: "Como conduzir crônicas de política e horror pessoal.", url: "/files/vampiro/guia-do-narrador.pdf" },
+      { name: "Bestiário de Kindred", icon: Skull, pages: 130, summary: "Antagonistas sobrenaturais para a crônica.", url: "/files/vampiro/bestiario.pdf" },
+      { name: "Chicago por Noite", icon: MapIcon, pages: 180, summary: "Cenário de campanha urbano completo.", url: "/files/vampiro/chicago.pdf" },
     ],
   },
   ordemparanormal: {
@@ -124,10 +124,10 @@ export const RPGS = {
     description:
       "Agentes recrutados por uma organização secreta enfrentam entidades paranormais em cenários brasileiros reconhecíveis, entre o pânico e o dever.",
     files: [
-      { name: "Livro Básico", icon: BookOpen, pages: 300, summary: "Classes, trilhas e o sistema NEX de poderes." },
-      { name: "Ameaças Ocultas", icon: Skull, pages: 220, summary: "Bestiário paranormal completo." },
-      { name: "Guia do Agente", icon: Shield, pages: 96, summary: "Missões, equipamentos e a estrutura da Ordem." },
-      { name: "Mapa da Ordem", icon: MapIcon, pages: 2, summary: "Bases e núcleos regionais espalhados pelo país." },
+      { name: "Livro Básico", icon: BookOpen, pages: 300, summary: "Classes, trilhas e o sistema NEX de poderes.", url: "/files/ordemparanormal/livro-basico.pdf" },
+      { name: "Ameaças Ocultas", icon: Skull, pages: 220, summary: "Bestiário paranormal completo.", url: "/files/ordemparanormal/ameacas-ocultas.pdf" },
+      { name: "Guia do Agente", icon: Shield, pages: 96, summary: "Missões, equipamentos e a estrutura da Ordem.", url: "/files/ordemparanormal/guia-do-agente.pdf" },
+      { name: "Mapa da Ordem", icon: MapIcon, pages: 2, summary: "Bases e núcleos regionais espalhados pelo país.", url: "/files/ordemparanormal/mapa.pdf" },
     ],
   },
   shadowrun: {
@@ -142,10 +142,10 @@ export const RPGS = {
     description:
       "Corporações controlam o mundo em um futuro onde dragões negociam ações na bolsa e mercenários magicamente talentosos cumprem trabalhos sujos nas sombras.",
     files: [
-      { name: "Livro de Regras", icon: BookOpen, pages: 456, summary: "Magia, cibernética e o sistema de dados de sucesso." },
-      { name: "Manual do Mestre", icon: Shield, pages: 180, summary: "Construção de runs e antagonistas corporativos." },
-      { name: "Compêndio de Runners", icon: Users, pages: 140, summary: "Arquétipos prontos para grupos de sombra." },
-      { name: "Suplemento: Seattle", icon: MapIcon, pages: 160, summary: "Guia de cenário urbano detalhado." },
+      { name: "Livro de Regras", icon: BookOpen, pages: 456, summary: "Magia, cibernética e o sistema de dados de sucesso.", url: "/files/shadowrun/livro-de-regras.pdf" },
+      { name: "Manual do Mestre", icon: Shield, pages: 180, summary: "Construção de runs e antagonistas corporativos.", url: "/files/shadowrun/manual-do-mestre.pdf" },
+      { name: "Compêndio de Runners", icon: Users, pages: 140, summary: "Arquétipos prontos para grupos de sombra.", url: "/files/shadowrun/compendio.pdf" },
+      { name: "Suplemento: Seattle", icon: MapIcon, pages: 160, summary: "Guia de cenário urbano detalhado.", url: "/files/shadowrun/seattle.pdf" },
     ],
   },
   cyberpunkred: {
@@ -160,10 +160,10 @@ export const RPGS = {
     description:
       "Sobreviva em uma metrópole dominada por corporações, implantes e violência. Reputação e estilo valem tanto quanto balas.",
     files: [
-      { name: "Livro de Regras", icon: BookOpen, pages: 456, summary: "Papéis, ciberware e o sistema Interlock." },
-      { name: "Guia do Mestre", icon: Shield, pages: 96, summary: "Ferramentas para rodar jobs e conflitos urbanos." },
-      { name: "Manual de Equipamentos", icon: FileText, pages: 60, summary: "Armas, implantes e tecnologia disponível." },
-      { name: "Noite Nova", icon: Scroll, pages: 40, summary: "Aventura introdutória em Night City." },
+      { name: "Livro de Regras", icon: BookOpen, pages: 456, summary: "Papéis, ciberware e o sistema Interlock.", url: "/files/cyberpunkred/livro-de-regras.pdf" },
+      { name: "Guia do Mestre", icon: Shield, pages: 96, summary: "Ferramentas para rodar jobs e conflitos urbanos.", url: "/files/cyberpunkred/guia-do-mestre.pdf" },
+      { name: "Manual de Equipamentos", icon: FileText, pages: 60, summary: "Armas, implantes e tecnologia disponível.", url: "/files/cyberpunkred/equipamentos.pdf" },
+      { name: "Noite Nova", icon: Scroll, pages: 40, summary: "Aventura introdutória em Night City.", url: "/files/cyberpunkred/noite-nova.pdf" },
     ],
   },
   gurps: {
@@ -178,10 +178,10 @@ export const RPGS = {
     description:
       "Um sistema modular baseado em pontos que se adapta a qualquer cenário — de faroeste a ficção científica dura — sem trocar de regras.",
     files: [
-      { name: "Básico — Personagens", icon: BookOpen, pages: 336, summary: "Criação de personagem por sistema de pontos." },
-      { name: "Básico — Campanhas", icon: Shield, pages: 416, summary: "Regras de mundo, combate e mestria." },
-      { name: "Suplemento de Magia", icon: Sparkles, pages: 240, summary: "Sistema detalhado de feitiços e tradições." },
-      { name: "Suplemento de Alta Tecnologia", icon: Zap, pages: 220, summary: "Equipamentos para cenários futuristas." },
+      { name: "Básico — Personagens", icon: BookOpen, pages: 336, summary: "Criação de personagem por sistema de pontos.", url: "/files/gurps/personagens.pdf" },
+      { name: "Básico — Campanhas", icon: Shield, pages: 416, summary: "Regras de mundo, combate e mestria.", url: "/files/gurps/campanhas.pdf" },
+      { name: "Suplemento de Magia", icon: Sparkles, pages: 240, summary: "Sistema detalhado de feitiços e tradições.", url: "/files/gurps/magia.pdf" },
+      { name: "Suplemento de Alta Tecnologia", icon: Zap, pages: 220, summary: "Equipamentos para cenários futuristas.", url: "/files/gurps/alta-tecnologia.pdf" },
     ],
   },
   operaespacial: {
@@ -196,10 +196,10 @@ export const RPGS = {
     description:
       "Tripulações independentes cruzam sistemas estelares negociando, contrabandeando e resistindo a impérios galácticos em decadência.",
     files: [
-      { name: "Livro de Regras", icon: BookOpen, pages: 260, summary: "Naves, tripulações e viagens interestelares." },
-      { name: "Guia da Galáxia", icon: MapIcon, pages: 140, summary: "Setores, facções e rotas comerciais." },
-      { name: "Bestiário de Criaturas", icon: Skull, pages: 90, summary: "Vida alienígena catalogada por sistema." },
-      { name: "Sinal Perdido", icon: Scroll, pages: 48, summary: "Aventura introdutória a bordo de uma nave." },
+      { name: "Livro de Regras", icon: BookOpen, pages: 260, summary: "Naves, tripulações e viagens interestelares.", url: "/files/operaespacial/livro-de-regras.pdf" },
+      { name: "Guia da Galáxia", icon: MapIcon, pages: 140, summary: "Setores, facções e rotas comerciais.", url: "/files/operaespacial/guia-da-galaxia.pdf" },
+      { name: "Bestiário de Criaturas", icon: Skull, pages: 90, summary: "Vida alienígena catalogada por sistema.", url: "/files/operaespacial/bestiario.pdf" },
+      { name: "Sinal Perdido", icon: Scroll, pages: 48, summary: "Aventura introdutória a bordo de uma nave.", url: "/files/operaespacial/sinal-perdido.pdf" },
     ],
   },
   "3det": {
@@ -214,9 +214,9 @@ export const RPGS = {
     description:
       "Um sistema brasileiro leve e flexível, ideal para grupos iniciantes ou mestres que preferem improviso a páginas de regras.",
     files: [
-      { name: "Livro Básico", icon: BookOpen, pages: 120, summary: "Atributos simplificados e criação rápida de personagem." },
-      { name: "Manual de Poderes", icon: Sparkles, pages: 80, summary: "Lista extensa de poderes e vantagens." },
-      { name: "Bestiário", icon: Skull, pages: 70, summary: "Criaturas prontas para qualquer cenário." },
+      { name: "Livro Básico", icon: BookOpen, pages: 120, summary: "Atributos simplificados e criação rápida de personagem.", url: "/files/3det/livro-basico.pdf" },
+      { name: "Manual de Poderes", icon: Sparkles, pages: 80, summary: "Lista extensa de poderes e vantagens.", url: "/files/3det/manual-de-poderes.pdf" },
+      { name: "Bestiário", icon: Skull, pages: 70, summary: "Criaturas prontas para qualquer cenário.", url: "/files/3det/bestiario.pdf" },
     ],
   },
 };
@@ -229,3 +229,11 @@ export const CATEGORIAS = [
 ];
 
 export const HERO = RPGS.tormenta20;
+
+export const getRecommendedRPGs = (currentId: string) => {
+  const categoryMatch = CATEGORIAS.find((cat) => cat.items.includes(currentId));
+  if (!categoryMatch) return [];
+
+  const relatedIds = categoryMatch.items.filter((id) => id !== currentId);
+  return relatedIds.map((id) => (RPGS as any)[id]).filter(Boolean);
+};
