@@ -1,7 +1,6 @@
 version: '3.8'
 
 services:
-  # Frontend (Vite) - é o que o projeto tem de fato hoje
   frontend:
     build:
       context: .
@@ -13,47 +12,11 @@ services:
       - ./project-rpgflix:/app
       - /app/node_modules
     environment:
-      - CHOKIDAR_USEPOLLING=true   # hot-reload confiável em alguns hosts (Windows/WSL)
+      - HOST=0.0.0.0
+      - CHOKIDAR_USEPOLLING=true
     networks:
       - rpgflix_network
     restart: unless-stopped
-
-  # --- Abaixo: serviços para quando o backend existir de fato ---
-  # Descomente e ajuste quando houver uma pasta backend/ com Dockerfile próprio
-
-  # db:
-  #   image: postgres:15-alpine
-  #   container_name: rpgflix_db
-  #   environment:
-  #     POSTGRES_USER: ${DB_USER:-admin}
-  #     POSTGRES_PASSWORD: ${DB_PASSWORD:-adminpassword}
-  #     POSTGRES_DB: rpgflix
-  #   ports:
-  #     - "5432:5432"
-  #   volumes:
-  #     - db_data:/var/lib/postgresql/data
-  #   networks:
-  #     - rpgflix_network
-  #   restart: unless-stopped
-
-  # backend:
-  #   build:
-  #     context: ./backend
-  #   container_name: rpgflix_backend
-  #   environment:
-  #     - DATABASE_URL=postgres://${DB_USER:-admin}:${DB_PASSWORD:-adminpassword}@db:5432/rpgflix
-  #     - PORT=8080
-  #   ports:
-  #     - "8080:8080"
-  #   depends_on:
-  #     - db
-  #   networks:
-  #     - rpgflix_network
-  #   restart: unless-stopped
-
-volumes:
-  db_data:
-    name: rpgflix_db_data
 
 networks:
   rpgflix_network:
