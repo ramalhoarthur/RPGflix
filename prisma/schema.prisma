@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model RPG {
+  id        Int        @id @default(autoincrement())
+  titulo    String
+  sinopse   String
+  capa_url  String
+  materiais Material[]
+  tags      RPG_Tag[]
+  @@map("RPGs")
+}
+
+model Material {
+  id          Int    @id @default(autoincrement())
+  nome        String
+  tipo        String
+  arquivo_url String
+  rpg_id      Int
+  rpg         RPG    @relation(fields: [rpg_id], references: [id], onDelete: Cascade)
+  @@map("Materiais")
+}
+
+model Tag {
+  id   Int       @id @default(autoincrement())
+  nome String    @unique
+  rpgs RPG_Tag[]
+  @@map("Tags")
+}
+
+model RPG_Tag {
+  rpg_id Int
+  tag_id Int
+  rpg RPG @relation(fields: [rpg_id], references: [id], onDelete: Cascade)
+  tag Tag @relation(fields: [tag_id], references: [id], onDelete: Cascade)
+  @@id([rpg_id, tag_id])
+  @@map("RPG_Tags")
+}
